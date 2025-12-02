@@ -73,6 +73,7 @@ void recurse(string in, string floating, const set<string>& dict, set<string>& r
       if (isFloating != string::npos) {
         nextFloating.erase(isFloating, 1);
       }
+      
       recurse(in, nextFloating, dict, results, index+1); // go to next character
       in[index] = '-'; // backtracking undoes any modifications made
     }
